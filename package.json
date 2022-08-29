@@ -4,11 +4,26 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
+    "serve:dev": "vue-cli-service serve & nodemon ./mock/serve.js",
+    "serve:test": "vue-cli-service serve --mode testing",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "build:test": "vue-cli-service build --mode testing",
+    "build:dev": "vue-cli-service build --mode development",
+    "lint": "vue-cli-service lint",
+    "prettier": "prettier --write .",
+    "prepare": "husky install",
+    "commit": "cz",
+    "nodemockserve": "nodemon ./mock/server.js"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "core-js": "^3.8.3",
+    "echarts": "^5.3.3",
+    "element-ui": "^2.15.9",
+    "express": "^4.18.1",
+    "mockjs": "^1.1.0",
+    "nodemon": "^2.0.19",
+    "screenfull": "^6.0.2",
     "vue": "^2.6.14",
     "vue-router": "^3.5.1",
     "vuex": "^3.6.2"
@@ -22,11 +37,12 @@
     "@vue/cli-plugin-vuex": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
     "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^8.0.3",
+    "husky": "^8.0.0",
     "lint-staged": "^11.1.2",
-    "prettier": "^2.4.1",
+    "prettier": "^2.7.1",
     "sass": "^1.32.7",
     "sass-loader": "^12.0.0",
     "vue-template-compiler": "^2.6.14"
