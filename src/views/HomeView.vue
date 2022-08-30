@@ -31,7 +31,6 @@
               <el-menu-item :index="citem.path">{{ citem.name }}</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
-
         </el-menu>
         <!-- aside -->
       </el-aside>
