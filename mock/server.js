@@ -3,6 +3,7 @@ let Mock = require('mockjs') //引入mock
 
 const loginData = require('./common/login.json')
 const loginsearch = require('./common/loginsearch.json')
+const getmenu = require('./common/menu.json')
 let app = express() //实例化express
 
 /**登录接口 */
@@ -27,6 +28,17 @@ app.use('/home/loginsearch', function (req, res) {
   })
 )
 })
+
+app.use('/home/menu', function (req, res) {
+	console.log(req, 'req')
+	res.json(
+		Mock.mock({
+			status: 200,
+			msg: '菜单获取成功',
+			getmenu
+	 })
+ )
+ })
 
 app.listen('8090', () => {
  console.log('监听端口 8090')

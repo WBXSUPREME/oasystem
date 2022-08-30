@@ -18,11 +18,21 @@
           active-text-color="#ffd04b"
           router
         >
-          <el-menu-item index="homepagecontent">
-            <i class="el-icon-setting"></i>
-            <span slot="title">首页</span>
-          </el-menu-item>
-          <el-submenu index="1">
+          <el-submenu
+            :index="item.path"
+            v-for="item in TheMainMenu"
+            :key="item.id"
+          >
+            <template slot="title">
+              <i class="el-icon-location"></i>
+              <span>{{ item.name }}</span>
+            </template>
+            <el-menu-item-group v-for="citem in item.children" :key="citem.id">
+              <el-menu-item :index="citem.path">{{ citem.name }}</el-menu-item>
+            </el-menu-item-group>
+          </el-submenu>
+
+          <!-- <el-submenu index="1">
             <template slot="title">
               <i class="el-icon-location"></i>
               <span>基础配置</span>
@@ -51,7 +61,7 @@
               <el-menu-item index="1-1">选项1</el-menu-item>
               <el-menu-item index="1-2">选项2</el-menu-item>
             </el-menu-item-group>
-          </el-submenu>
+          </el-submenu> -->
         </el-menu>
         <!-- aside -->
       </el-aside>
@@ -93,9 +103,17 @@
 <script>
 // import screenfull from 'screenfull'
 export default {
+  data() {
+    return {
+      TheMainMenu: [] //菜单栏数据
+    }
+  },
   methods: {
     handleOpen(key, keyPath) {
       console.log(key, keyPath)
+      if (keyPath == '/home' || keyPath == '/contract') {
+        this.$router.push(key)
+      }
     },
     handleClose(key, keyPath) {
       console.log(key, keyPath)
@@ -105,6 +123,13 @@ export default {
       console.log(1)
       // screenfull.toggle()
     }
+  },
+  created() {
+    this.$axios.get('/effect/home/menu').then((res) => {
+      // console.log(res.data.getmenu)
+      this.TheMainMenu = res.data.getmenu
+      console.log(this.TheMainMenu)
+    })
   }
 }
 </script>
@@ -117,7 +142,6 @@ export default {
   // line-height: 200px;
   height: 98vh;
 }
-
 .el-main {
   background-color: #ffffff;
   color: #333;

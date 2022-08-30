@@ -1,0 +1,141 @@
+[
+    {
+        "id": 1,
+        "name": "首页",
+        "icon": "el-icon-s-home",
+        "path": "/home",
+        "children":[]
+    },
+    {
+        "id": 2,
+        "name": "基础配置",
+        "icon": "el-icon-setting",
+        "path": "/basis",
+        "children": [
+            {
+                "id": 3,
+                "name": "用户管理",
+                "path": "/user"
+            },
+            {
+                "id": 4,
+                "name": "角色管理",
+                "path": "/roles"
+            },
+            {
+                "id": 5,
+                "name": "权限管理",
+                "path": "/authority"
+            },
+            {
+                "id": 6,
+                "name": "菜单管理",
+                "path": "/menus"
+            },
+            {
+                "id": 7,
+                "name": "职级管理",
+                "path": "/rank"
+            },
+            {
+                "id": 8,
+                "name": "岗位管理",
+                "path": "/job"
+            },
+            {
+                "id": 9,
+                "name": "操作日志",
+                "path": "/oper"
+            },
+            {
+                "id": 10,
+                "name": "登录日志",
+                "path": "/login-oper"
+            },
+            {
+                "id": 11,
+                "name": "部门管理",
+                "path": "/divisional"
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "name": "配置工作流",
+        "icon": "el-icon-document",
+        "path": "/workflow",
+        "children": [
+            {
+                "id": 13,
+                "name": "配置审批流程",
+                "path": "/approval"
+            },
+            {
+                "id": 14,
+                "name": "配置审批类型",
+                "path": "/approval-types"
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "name": "材料管理",
+        "icon": "el-icon-s-finance",
+        "path": "/material",
+        "children": [
+            {
+                "id": 16,
+                "name": "材料管理",
+                "path": "/material-ment"
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "name": "企业通讯",
+        "icon": "el-icon-phone-outline",
+        "path": "/firm",
+        "children": [
+            {
+                "id": 18,
+                "name": "企业通信",
+                "path": "/firm-comm"
+            },
+            {
+                "id": 19,
+                "name": "工资条录入",
+                "path": "/lary-sheet"
+            }
+        ]
+    },
+     {
+        "id": 30,
+        "name": "合同管理",
+        "icon": "el-icon-bank-card",
+        "path": "/contract",
+        "children":[]
+    },
+    {
+        "id": 20,
+        "name": "OA审批",
+        "icon": "el-icon-user",
+        "path": "/oa-approve",
+        "children": [
+            {
+                "id": 21,
+                "name": "待办事项",
+                "path": "/backlog"
+            },
+            {
+                "id": 22,
+                "name": "已办事项",
+                "path": "/finished"
+            },
+            {
+                "id": 23,
+                "name": "我发起的",
+                "path": "/started"
+            }
+        ]
+    }
+]
