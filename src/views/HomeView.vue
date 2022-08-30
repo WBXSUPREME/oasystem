@@ -32,36 +32,6 @@
             </el-menu-item-group>
           </el-submenu>
 
-          <!-- <el-submenu index="1">
-            <template slot="title">
-              <i class="el-icon-location"></i>
-              <span>基础配置</span>
-            </template>
-            <el-menu-item-group>
-              <el-menu-item index="1-1">选项1</el-menu-item>
-              <el-menu-item index="1-2">选项2</el-menu-item>
-            </el-menu-item-group>
-          </el-submenu>
-          <el-submenu index="2">
-            <template slot="title">
-              <i class="el-icon-location"></i>
-              <span>配置工作流</span>
-            </template>
-            <el-menu-item-group>
-              <el-menu-item index="1-1">选项1</el-menu-item>
-              <el-menu-item index="1-2">选项2</el-menu-item>
-            </el-menu-item-group>
-          </el-submenu>
-          <el-submenu index="3">
-            <template slot="title">
-              <i class="el-icon-location"></i>
-              <span>材料管理</span>
-            </template>
-            <el-menu-item-group>
-              <el-menu-item index="1-1">选项1</el-menu-item>
-              <el-menu-item index="1-2">选项2</el-menu-item>
-            </el-menu-item-group>
-          </el-submenu> -->
         </el-menu>
         <!-- aside -->
       </el-aside>
