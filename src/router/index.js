@@ -11,21 +11,21 @@ const routes = [
     component: HomeView,
     children: [
       {
-        path: '/home',//首页
+        path: '/home', //首页
         name: 'home',
         component: () =>
           import(
             /* webpackChunkName: "about" */ '../views/HomePageContent/HomePageContentView.vue'
           )
       },
-			{
-        path: '/contract',//合同管理
+      {
+        path: '/contract', //合同管理
         name: 'contract',
         component: () =>
           import(
             /* webpackChunkName: "about" */ '../views/HomePageContent/ContractView.vue'
           )
-      },
+      }
     ]
   },
   {

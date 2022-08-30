@@ -5,8 +5,9 @@
       <input type="text" placeholder="请输入用户名" class="inp1" />
       <input type="text" placeholder="请输入密码" class="inp1" />
 
-
-      <p class="ForgotPassword" @click="$router.push('/changepassword')">忘记密码?</p>
+      <p class="ForgotPassword" @click="$router.push('/changepassword')">
+        忘记密码?
+      </p>
       <p class="three">
         <input type="text" placeholder="验证码" />
         <button>验证码图片</button>
@@ -14,8 +15,16 @@
 
       <!-- 登录按钮 -->
       <button class="loginbutton">登录</button>
-			<img class="img1" src="../../../public/img/Snipaste_2022-08-27_14-44-14.png" alt="">
-			<img class="img2" src="../../../public/img/Snipaste_2022-08-27_14-45-03.png" alt="">
+      <img
+        class="img1"
+        src="../../../public/img/Snipaste_2022-08-27_14-44-14.png"
+        alt=""
+      />
+      <img
+        class="img2"
+        src="../../../public/img/Snipaste_2022-08-27_14-45-03.png"
+        alt=""
+      />
     </div>
   </div>
 </template>
@@ -23,19 +32,17 @@
 <script>
 // import {login} from '../../http/api.js'
 export default {
-	data() {
-		return {
-
-		}
-	},
-	created() {
-		this.$axios.post('/effect/home/loginsearch').then((res)=>{
-			console.log(res,'res');
-		})
-		// this.$axios.post('/http://127.0.0.1:8000/api/staff/login').then((res)=>{
-		// 	console.log(res);
-		// })
-	},
+  data() {
+    return {}
+  },
+  created() {
+    this.$axios.post('/effect/home/loginsearch').then((res) => {
+      console.log(res, 'res')
+    })
+    // this.$axios.post('/http://127.0.0.1:8000/api/staff/login').then((res)=>{
+    // 	console.log(res);
+    // })
+  }
 }
 </script>
 
@@ -53,14 +60,14 @@ export default {
   display: flex;
   // text-align: center;
   .loginbox {
-   justify-content: center;
-	 align-items: center;
+    justify-content: center;
+    align-items: center;
     width: 495px;
     height: 463px;
     background-color: rgba(255, 255, 255, 100);
     border-radius: 34px;
     margin: auto;
-		position: relative;
+    position: relative;
     p {
       margin-left: 171px;
       margin-top: 29px;
@@ -83,17 +90,17 @@ export default {
       font-family: Roboto;
       margin-left: 53px;
       margin-top: 34px;
-			padding-left: 56px;
-			// border: none;
+      padding-left: 56px;
+      // border: none;
     }
     .ForgotPassword {
       color: rgba(244, 196, 56, 100);
       font-size: 16px;
-			// background-color: skyblue;
-			margin-left: 272px;
-			margin-top: 2px;
-			text-align: right;
-			padding-right: 20px;
+      // background-color: skyblue;
+      margin-left: 272px;
+      margin-top: 2px;
+      text-align: right;
+      padding-right: 20px;
     }
     .three {
       width: 389px;
@@ -108,7 +115,7 @@ export default {
         height: 46px;
         border-radius: 16px;
         border: 1px solid #c8c8c8;
-				padding-left: 22px;
+        padding-left: 22px;
       }
       button {
         width: 119px;
@@ -134,20 +141,20 @@ export default {
       margin-left: 85px;
       margin-top: 34px;
     }
-		.img1{
-			position: absolute;
-			top: 104px;
-			left: 76px;
-			width: 23px;
-			height: 23px;
-		}
-		.img2{
-			position: absolute;
-			top: 192px;
-			left: 76px;
-			width: 23px;
-			height: 23px;
-		}
+    .img1 {
+      position: absolute;
+      top: 104px;
+      left: 76px;
+      width: 23px;
+      height: 23px;
+    }
+    .img2 {
+      position: absolute;
+      top: 192px;
+      left: 76px;
+      width: 23px;
+      height: 23px;
+    }
   }
 }
 </style>
