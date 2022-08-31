@@ -8,7 +8,13 @@
     <div class="but">
       <el-button icon="el-icon-search" size="mini">查询</el-button>
       <el-button icon="el-icon-refresh-right" size="mini">重置</el-button>
-      <el-button @click="$router.push('/add-user')" type="success" icon="el-icon-circle-plus-outline" size="mini">新增用户</el-button>
+      <el-button
+        @click="$router.push('/add-user')"
+        type="success"
+        icon="el-icon-circle-plus-outline"
+        size="mini"
+        >新增用户</el-button
+      >
     </div>
     <!-- 表格 -->
     <el-table :data="tableData" stripe border style="width: 100%">
@@ -21,17 +27,19 @@
       <el-table-column prop="address" label="所属部门"> </el-table-column>
       <el-table-column prop="address" label="操作" width="220px">
         <template slot-scope="scope">
-        <el-button
-          size="mini"
-          @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
-        <el-button
-          size="mini"
-          type="danger"
-          @click="handleDelete(scope.$index, scope.row)">删除</el-button>
+          <el-button size="mini" @click="handleEdit(scope.$index, scope.row)"
+            >编辑</el-button
+          >
           <el-button
-          size="mini"
-          @click="$router.push('/details')">详情</el-button>
-      </template>
+            size="mini"
+            type="danger"
+            @click="handleDelete(scope.$index, scope.row)"
+            >删除</el-button
+          >
+          <el-button size="mini" @click="$router.push('/details')"
+            >详情</el-button
+          >
+        </template>
       </el-table-column>
     </el-table>
     <!-- 表格 -->
@@ -50,7 +58,7 @@ export default {
   // },
   data() {
     return {
-        page:1,
+      page: 1,
       tableData: [
         {
           id: 1,
@@ -77,13 +85,10 @@ export default {
   },
   created() {},
   mounted() {},
-  methods: {
-
-  }
+  methods: {}
 }
 </script>
 <style scoped lang="scss">
-
 .user {
   width: 864px;
 }

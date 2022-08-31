@@ -17,6 +17,6 @@ function removetoken(TokenKey) {
   Cookies.remove(TokenKey)
 }
 
-export { setToken, getToken, removetoken}
+export { setToken, getToken, removetoken }
 
 //npm i js-cookie

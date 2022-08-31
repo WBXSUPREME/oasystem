@@ -35,71 +35,64 @@ const routes = [
             /* webpackChunkName: "about" */ '../views/BasicConfiguration/UserView.vue'
           )
       },
-			{
+      {
         path: '/roles',
         name: 'roles',
         component: () =>
           import(
             /* webpackChunkName: "about" */ '../views/BasicConfiguration/RolesView.vue'
           )
-      }
-			,
-			{
-        path: '/authority',//权限管理
+      },
+      {
+        path: '/authority', //权限管理
         name: 'authority',
         component: () =>
           import(
             /* webpackChunkName: "about" */ '../views/BasicConfiguration/AuthorityView.vue'
           )
-      }
-			,
-			{
-        path: '/menus',//
+      },
+      {
+        path: '/menus', //
         name: 'menus',
         component: () =>
           import(
             /* webpackChunkName: "about" */ '../views/BasicConfiguration/MenusView.vue'
           )
-      }
-			,
-			{
-        path: '/rank',//
+      },
+      {
+        path: '/rank', //
         name: 'rank',
         component: () =>
           import(
             /* webpackChunkName: "about" */ '../views/BasicConfiguration/RankView.vue'
           )
-      }
-			,
-			{
-        path: '/job',//岗位管理
+      },
+      {
+        path: '/job', //岗位管理
         name: 'job',
         component: () =>
           import(
             /* webpackChunkName: "about" */ '../views/BasicConfiguration/JobView.vue'
           )
-      }
-			,
-			{
-        path: '/oper',//操作日志
+      },
+      {
+        path: '/oper', //操作日志
         name: 'oper',
         component: () =>
           import(
             /* webpackChunkName: "about" */ '../views/BasicConfiguration/OperView.vue'
           )
-      }
-			,
-			{
-        path: '/login-oper',//操作日志
+      },
+      {
+        path: '/login-oper', //操作日志
         name: '/login-oper',
         component: () =>
           import(
             /* webpackChunkName: "about" */ '../views/BasicConfiguration/LoginOperView.vue'
           )
-      }
-			,
-			{
-        path: '/divisional',//操作日志
+      },
+      {
+        path: '/divisional', //操作日志
         name: '/divisional',
         component: () =>
           import(
@@ -107,17 +100,17 @@ const routes = [
           )
       },
 
-			//配置工作流
-			{
-        path: '/approval',//操作日志
+      //配置工作流
+      {
+        path: '/approval', //操作日志
         name: '/approval',
         component: () =>
           import(
             /* webpackChunkName: "about" */ '../views/ConfiguringTheWorkflow/ApprovalView.vue'
           )
       },
-			{
-        path: '/approval-types',//操作日志
+      {
+        path: '/approval-types', //操作日志
         name: '/approval-types',
         component: () =>
           import(
@@ -125,10 +118,9 @@ const routes = [
           )
       },
 
-
-			//材料管理
-			{
-        path: '/material-ment',//操作日志
+      //材料管理
+      {
+        path: '/material-ment', //操作日志
         name: '/material-ment',
         component: () =>
           import(
@@ -136,19 +128,17 @@ const routes = [
           )
       },
 
-
-
-			//企业通讯
-			{
-        path: '/firm-comm',//
+      //企业通讯
+      {
+        path: '/firm-comm', //
         name: '/firm-comm',
         component: () =>
           import(
             /* webpackChunkName: "about" */ '../views/CorporateCommunications/FirmCommView.vue'
           )
       },
-			{
-        path: '/lary-sheet',//
+      {
+        path: '/lary-sheet', //
         name: '/lary-sheet',
         component: () =>
           import(
@@ -156,32 +146,31 @@ const routes = [
           )
       },
 
-
-			//OA审批
-			{
-        path: '/backlog',//
+      //OA审批
+      {
+        path: '/backlog', //
         name: '/backlog',
         component: () =>
           import(
             /* webpackChunkName: "about" */ '../views/OAapproval/BacklogView.vue'
           )
       },
-			{
-        path: '/finished',//
+      {
+        path: '/finished', //
         name: '/finished',
         component: () =>
           import(
             /* webpackChunkName: "about" */ '../views/OAapproval/FinishedView.vue'
           )
       },
-			{
-        path: '/started',//
+      {
+        path: '/started', //
         name: '/started',
         component: () =>
           import(
             /* webpackChunkName: "about" */ '../views/OAapproval/StartedView.vue'
           )
-      },
+      }
     ]
   },
   {
