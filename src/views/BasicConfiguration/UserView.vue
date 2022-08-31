@@ -1,118 +1,275 @@
 <template>
-  <div class="user">
-    <div class="header">
-      <span>姓名：<input type="text" placeholder="请输入姓名" /></span>
-      <span>所属部门：<input type="text" placeholder="请输入部门" /></span>
-      <span>手机号：<input type="text" placeholder="请输入手机号" /></span>
+  <div>
+    <!-- /**顶部三个搜索框 */ -->
+    <div class="search">
+      <p>姓名：<input placeholder="请输入姓名" /></p>
+      <p>所属部门：<input placeholder="请输入部门" /></p>
+      <p>手机号：<input placeholder="请输入手机号" /></p>
     </div>
-    <div class="but">
-      <el-button icon="el-icon-search" size="mini">查询</el-button>
-      <el-button icon="el-icon-refresh-right" size="mini">重置</el-button>
-      <el-button
-        @click="$router.push('/add-user')"
-        type="success"
-        icon="el-icon-circle-plus-outline"
-        size="mini"
+
+    <!-- 搜索按钮 -->
+    <div class="button">
+      <div class="left">
+        <el-button icon="el-icon-search">查询</el-button>
+        <el-button icon="el-icon-back">重置</el-button>
+      </div>
+
+      <el-button class="el-buttons" icon="el-icon-circle-plus-outline"
         >新增用户</el-button
       >
     </div>
+
     <!-- 表格 -->
-    <el-table :data="tableData" stripe border style="width: 100%">
-      <el-table-column prop="id" label="id"> </el-table-column>
-      <el-table-column prop="name" label="用户名称"> </el-table-column>
-      <el-table-column prop="address" label="账号"> </el-table-column>
-      <el-table-column prop="address" label="手机号"> </el-table-column>
-      <el-table-column prop="address" label="所属角色"> </el-table-column>
-      <el-table-column prop="address" label="所属职级"> </el-table-column>
-      <el-table-column prop="address" label="所属部门"> </el-table-column>
-      <el-table-column prop="address" label="操作" width="220px">
-        <template slot-scope="scope">
-          <el-button size="mini" @click="handleEdit(scope.$index, scope.row)"
-            >编辑</el-button
-          >
-          <el-button
-            size="mini"
-            type="danger"
-            @click="handleDelete(scope.$index, scope.row)"
-            >删除</el-button
-          >
-          <el-button size="mini" @click="$router.push('/details')"
-            >详情</el-button
-          >
-        </template>
-      </el-table-column>
+    <el-table :data="tableData" stripe border style="width: 95%">
+      <el-table-column prop="id" label="id" width="60"> </el-table-column>
+      <el-table-column prop="name" label="用户名称" width="160"> </el-table-column>
+      <el-table-column prop="user" label="账号" width="160"> </el-table-column>
+      <el-table-column prop="phone" label="手机号" width="160"> </el-table-column>
+      <el-table-column prop="roles" label="所属角色" width="160"> </el-table-column>
+      <el-table-column prop="zhiji" label="所属职级" width="160"> </el-table-column>
+      <el-table-column prop="bumen" label="所属部门" width="160"> </el-table-column>
+      <el-table-column prop="" label="操作" width="260">
+				<template slot-scope="scope">
+        <el-button type="primary" size="small" @click="xiu(scope.row)">修改</el-button>
+        <el-button type="danger" size="small">删除</el-button>
+
+      </template>
+			</el-table-column>
+
     </el-table>
-    <!-- 表格 -->
-    <!-- 分页 -->
-    <!-- <pagin :page="page"></pagin> -->
-    <!-- 分页 -->
+
+		<!-- 分页 -->
+		<div class="pagination">
+			<p>共20条</p>
+			<p><el-button>上一页</el-button></p>
+			<p>2/5</p>
+			<p><el-button>下一页</el-button></p>
+		</div>
   </div>
 </template>
 
 <script>
-// import pagin from '../components/paging.vue'
 export default {
-  name: '',
-  // components: {
-  //     pagin
-  // },
   data() {
     return {
-      page: 1,
+      /**element表格数据 */
       tableData: [
         {
-          id: 1,
-          name: '超级管理员',
-          address: 'admin'
-        },
-        {
-          id: '2',
+					id:1,
           name: '王小虎',
-          address: '1 1517 弄'
+					user:'admin',
+          phone: 15290355502,
+					roles:"小丑",
+					zhiji:"老总",
+					bumen:"老总部",
         },
-        {
-          id: '3',
+				{
+					id:1,
           name: '王小虎',
-          address: '1 1519 弄'
+					user:'admin',
+          phone: 15290355502,
+					roles:"小丑",
+					zhiji:"老总",
+					bumen:"老总部",
+        },{
+					id:1,
+          name: '王小虎',
+					user:'admin',
+          phone: 15290355502,
+					roles:"小丑",
+					zhiji:"老总",
+					bumen:"老总部",
+        },{
+					id:1,
+          name: '王小虎',
+					user:'admin',
+          phone: 15290355502,
+					roles:"小丑",
+					zhiji:"老总",
+					bumen:"老总部",
+        },{
+					id:1,
+          name: '王小虎',
+					user:'admin',
+          phone: 15290355502,
+					roles:"小丑",
+					zhiji:"老总",
+					bumen:"老总部",
+        },{
+					id:1,
+          name: '王小虎',
+					user:'admin',
+          phone: 15290355502,
+					roles:"小丑",
+					zhiji:"老总",
+					bumen:"老总部",
+        },{
+					id:1,
+          name: '王小虎',
+					user:'admin',
+          phone: 15290355502,
+					roles:"小丑",
+					zhiji:"老总",
+					bumen:"老总部",
+        },{
+					id:1,
+          name: '王小虎',
+					user:'admin',
+          phone: 15290355502,
+					roles:"小丑",
+					zhiji:"老总",
+					bumen:"老总部",
+        },{
+					id:1,
+          name: '王小虎',
+					user:'admin',
+          phone: 15290355502,
+					roles:"小丑",
+					zhiji:"老总",
+					bumen:"老总部",
+        },{
+					id:1,
+          name: '王小虎',
+					user:'admin',
+          phone: 15290355502,
+					roles:"小丑",
+					zhiji:"老总",
+					bumen:"老总部",
+        },{
+					id:1,
+          name: '王小虎',
+					user:'admin',
+          phone: 15290355502,
+					roles:"小丑",
+					zhiji:"老总",
+					bumen:"老总部",
+        },{
+					id:1,
+          name: '王小虎',
+					user:'admin',
+          phone: 15290355502,
+					roles:"小丑",
+					zhiji:"老总",
+					bumen:"老总部",
+        },{
+					id:1,
+          name: '王小虎',
+					user:'admin',
+          phone: 15290355502,
+					roles:"小丑",
+					zhiji:"老总",
+					bumen:"老总部",
+        },{
+					id:1,
+          name: '王小虎',
+					user:'admin',
+          phone: 15290355502,
+					roles:"小丑",
+					zhiji:"老总",
+					bumen:"老总部",
+        },{
+					id:1,
+          name: '王小虎',
+					user:'admin',
+          phone: 15290355502,
+					roles:"小丑",
+					zhiji:"老总",
+					bumen:"老总部",
+        },{
+					id:1,
+          name: '王小虎',
+					user:'admin',
+          phone: 15290355502,
+					roles:"小丑",
+					zhiji:"老总",
+					bumen:"老总部",
+        },{
+					id:1,
+          name: '王小虎',
+					user:'admin',
+          phone: 15290355502,
+					roles:"小丑",
+					zhiji:"老总",
+					bumen:"老总部",
+        },{
+					id:1,
+          name: '王小虎',
+					user:'admin',
+          phone: 15290355502,
+					roles:"小丑",
+					zhiji:"老总",
+					bumen:"老总部",
+        },{
+					id:1,
+          name: '王小虎',
+					user:'admin',
+          phone: 15290355502,
+					roles:"小丑",
+					zhiji:"老总",
+					bumen:"老总部",
+        },{
+					id:1,
+          name: '王小虎',
+					user:'admin',
+          phone: 15290355502,
+					roles:"小丑",
+					zhiji:"老总",
+					bumen:"老总部",
+        },{
+					id:1,
+          name: '王小虎',
+					user:'admin',
+          phone: 15290355502,
+					roles:"小丑",
+					zhiji:"老总",
+					bumen:"老总部",
         },
-        {
-          id: '4',
-          name: '王小虎',
-          address: '1 1516 弄'
-        }
       ]
     }
-  },
-  created() {},
-  mounted() {},
-  methods: {}
+  }
 }
 </script>
-<style scoped lang="scss">
-.user {
-  width: 864px;
-}
-.header {
-  width: 100%;
-  font-size: 16px;
-  color: rgba(119, 119, 119, 0.884);
-  span {
-    margin-right: 60px;
-    input {
-      padding: 3px 5px;
-      font-size: 12px;
-      outline: none;
-    }
+<style lang="scss" scoped>
+
+.search {
+  //搜索
+  display: flex;
+  justify-content: space-around;
+  margin: 0.625rem 0;
+  input {
+    width: 18.75rem;
+    height: 1.875rem;
   }
 }
-.but {
-  width: 100%;
-  margin: 20px 0;
-  .el-button:nth-child(3) {
-    float: right;
-    margin-right: 70px;
-    background-color: #bfbfec;
-    border: 1px solid #bfbfec;
+.button {
+  // background-color: red;
+  display: flex;
+  padding: 0 60px;
+  justify-content: space-between;
+	margin-bottom: 3.125rem;
+  .el-buttons {
+    background-color: #c2c2fb;
+    color: white;
   }
+}
+.el-table{
+	margin-left: 3.75rem;
+
+}
+.pagination{
+	width: 40%;
+	height: 2.5rem;
+
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+	margin-bottom: 3.75rem;
+	margin-top: .9375rem;
+	line-height: 2.5rem;
+	margin-left: 45.625rem;
+	p{
+		padding: 0;
+		margin: 0;
+	}
 }
 </style>

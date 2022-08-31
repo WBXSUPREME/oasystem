@@ -1,118 +1,105 @@
 <template>
-  <div class="user">
-    <div class="header">
-      <span>姓名：<input type="text" placeholder="请输入姓名" /></span>
-      <span>所属部门：<input type="text" placeholder="请输入部门" /></span>
-      <span>手机号：<input type="text" placeholder="请输入手机号" /></span>
-    </div>
-    <div class="but">
-      <el-button icon="el-icon-search" size="mini">查询</el-button>
-      <el-button icon="el-icon-refresh-right" size="mini">重置</el-button>
-      <el-button
-        @click="$router.push('/add-user')"
-        type="success"
-        icon="el-icon-circle-plus-outline"
-        size="mini"
-        >新增用户</el-button
+  <div>
+    <!-- 顶部权限管理搜索框，按钮等 -->
+    <div class="searchheader">
+      <span>权限管理</span>
+      <input type="text" placeholder="请输入姓名" />
+      <el-button icon="el-icon-search">查询</el-button>
+      <el-button icon="el-icon-back">重置</el-button>
+      <el-button class="el-buttons" icon="el-icon-circle-plus-outline"
+        >新增权限</el-button
       >
     </div>
-    <!-- 表格 -->
-    <el-table :data="tableData" stripe border style="width: 100%">
-      <el-table-column prop="id" label="id"> </el-table-column>
-      <el-table-column prop="name" label="用户名称"> </el-table-column>
-      <el-table-column prop="address" label="账号"> </el-table-column>
-      <el-table-column prop="address" label="手机号"> </el-table-column>
-      <el-table-column prop="address" label="所属角色"> </el-table-column>
-      <el-table-column prop="address" label="所属职级"> </el-table-column>
-      <el-table-column prop="address" label="所属部门"> </el-table-column>
-      <el-table-column prop="address" label="操作" width="220px">
-        <template slot-scope="scope">
-          <el-button size="mini" @click="handleEdit(scope.$index, scope.row)"
-            >编辑</el-button
-          >
-          <el-button
-            size="mini"
-            type="danger"
-            @click="handleDelete(scope.$index, scope.row)"
-            >删除</el-button
-          >
-          <el-button size="mini" @click="$router.push('/details')"
-            >详情</el-button
-          >
-        </template>
-      </el-table-column>
+    <!-- 表格部分 -->
+    <el-table :data="tableData3" height="250" border style="width: 95%">
+      <el-table-column prop="date" label="菜单名称" width="200"> </el-table-column>
+      <el-table-column prop="name" label="菜单路径" width="200"> </el-table-column>
+      <el-table-column prop="name" label="排序" width="200"> </el-table-column>
+      <el-table-column prop="name" label="菜单图标" width="200"> </el-table-column>
+      <el-table-column prop="name" label="菜单类型" width="200"> </el-table-column>
+      <el-table-column prop="name" label="操作" width="200"> </el-table-column>
     </el-table>
-    <!-- 表格 -->
-    <!-- 分页 -->
-    <!-- <pagin :page="page"></pagin> -->
-    <!-- 分页 -->
+
+		<!-- 分页 -->
+		<div class="pagination">
+			<p>共20条</p>
+			<p><el-button>上一页</el-button></p>
+			<p>2/5</p>
+			<p><el-button>下一页</el-button></p>
+		</div>
   </div>
 </template>
-
 <script>
-// import pagin from '../components/paging.vue'
-export default {
-  name: '',
-  // components: {
-  //     pagin
-  // },
-  data() {
-    return {
-      page: 1,
-      tableData: [
-        {
-          id: 1,
-          name: '超级管理员',
-          address: 'admin'
-        },
-        {
-          id: '2',
+  export default {
+    data() {
+      return {
+        tableData3: [{
+          date: '2016-05-03',
           name: '王小虎',
-          address: '1 1517 弄'
-        },
-        {
-          id: '3',
+          address: '上海市普陀区'
+        }, {
+          date: '2016-05-02',
           name: '王小虎',
-          address: '1 1519 弄'
-        },
-        {
-          id: '4',
+          address: '上海市普陀区'
+        }, {
+          date: '2016-05-04',
           name: '王小虎',
-          address: '1 1516 弄'
-        }
-      ]
+          address: '上海市普陀区'
+        }, {
+          date: '2016-05-01',
+          name: '王小虎',
+          address: '上海市普陀区'
+        }, {
+          date: '2016-05-08',
+          name: '王小虎',
+          address: '上海市普陀区'
+        }, {
+          date: '2016-05-06',
+          name: '王小虎',
+          address: '上海市普陀区'
+        }, {
+          date: '2016-05-07',
+          name: '王小虎',
+          address: '上海市普陀区'
+        }]
+      }
     }
-  },
-  created() {},
-  mounted() {},
-  methods: {}
-}
+  }
 </script>
-<style scoped lang="scss">
-.user {
-  width: 864px;
-}
-.header {
-  width: 100%;
-  font-size: 16px;
-  color: rgba(119, 119, 119, 0.884);
+<style lang="scss" scoped>
+.searchheader {
+  margin-left: 1.25rem;
+  margin-top: 1.875rem;
   span {
-    margin-right: 60px;
-    input {
-      padding: 3px 5px;
-      font-size: 12px;
-      outline: none;
-    }
+    margin-right: 0.625rem;
+  }
+  input {
+    width: 12.5rem;
+    height: 1.875rem;
+    margin-right: 10px;
+  }
+  .el-button:nth-child(5) {
+    background-color: #c2c2fb;
   }
 }
-.but {
-  width: 100%;
-  margin: 20px 0;
-  .el-button:nth-child(3) {
-    float: right;
-    margin-right: 70px;
-    background-color: #bfbfec;
-    border: 1px solid #bfbfec;
-  }
+.el-table{
+	margin: 20px;
+
+}
+.pagination{
+	width: 40%;
+	height: 2.5rem;
+
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+	margin-bottom: 3.75rem;
+	margin-top: .9375rem;
+	line-height: 2.5rem;
+	margin-left: 45.625rem;
+	p{
+		padding: 0;
+		margin: 0;
+	}
 }
 </style>
