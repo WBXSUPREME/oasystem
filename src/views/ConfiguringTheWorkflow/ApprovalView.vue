@@ -15,7 +15,13 @@
     <!-- 分页 -->
     <div class="pagination">
       <el-button icon="el-icon-arrow-left"></el-button>
-      <el-button v-for="(item,index) in page" :key="index" @click="pagebutton(index)" :class="{active:i==index}">{{item.pagenum}}</el-button>
+      <el-button
+        v-for="(item, index) in page"
+        :key="index"
+        @click="pagebutton(index)"
+        :class="{ active: i == index }"
+        >{{ item.pagenum }}</el-button
+      >
       <el-button icon="el-icon-arrow-right"></el-button>
     </div>
   </div>
@@ -24,7 +30,7 @@
 export default {
   data() {
     return {
-			/**表格数据 */
+      /**表格数据 */
       tableData: [
         {
           date: '2016-05-02',
@@ -47,37 +53,45 @@ export default {
           address: '上海市普陀区金沙江路 1516 弄'
         }
       ],
-			page:[
-				{
-					pagenum:1
-				},{
-					pagenum:2
-				},{
-					pagenum:3
-				},{
-					pagenum:4
-				},{
-					pagenum:5
-				},{
-					pagenum:6
-				},{
-					pagenum:7
-				},{
-					pagenum:8
-				},{
-					pagenum:9
-				}
-			],
-			i:0,
+      page: [
+        {
+          pagenum: 1
+        },
+        {
+          pagenum: 2
+        },
+        {
+          pagenum: 3
+        },
+        {
+          pagenum: 4
+        },
+        {
+          pagenum: 5
+        },
+        {
+          pagenum: 6
+        },
+        {
+          pagenum: 7
+        },
+        {
+          pagenum: 8
+        },
+        {
+          pagenum: 9
+        }
+      ],
+      i: 0
     }
   },
 
-	methods: {
-		pagebutton(index){
-			console.log(index);
-			this.i=index
-		}
-	},
+  methods: {
+    pagebutton(index) {
+      console.log(index)
+      this.i = index
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>
@@ -94,14 +108,14 @@ export default {
   margin-top: 1.25rem;
   margin-left: 1.25rem;
 }
-.pagination{
-	margin-top: 1.25rem;
+.pagination {
+  margin-top: 1.25rem;
   margin-right: 1.25rem;
-	text-align: right;
+  text-align: right;
 }
-.active{//分页背景色
-	background-color: #1990ff;
-	color: white;
+.active {
+  //分页背景色
+  background-color: #1990ff;
+  color: white;
 }
 </style>
-

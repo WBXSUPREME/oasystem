@@ -261,26 +261,25 @@ export default {
   }
 }
 
-.el-table{
-	margin-left: .625rem;
-	margin-top: 3.75rem;
-
+.el-table {
+  margin-left: 0.625rem;
+  margin-top: 3.75rem;
 }
 //分页
-.pagination{
-	width: 40%;
-	height: 2.5rem;
+.pagination {
+  width: 40%;
+  height: 2.5rem;
 
-	display: flex;
-	justify-content: space-around;
-	text-align: center;
-	margin-bottom: 3.75rem;
-	margin-top: .9375rem;
-	line-height: 2.5rem;
-	margin-left: 45.625rem;
-	p{
-		padding: 0;
-		margin: 0;
-	}
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-bottom: 3.75rem;
+  margin-top: 0.9375rem;
+  line-height: 2.5rem;
+  margin-left: 45.625rem;
+  p {
+    padding: 0;
+    margin: 0;
+  }
 }
 </style>

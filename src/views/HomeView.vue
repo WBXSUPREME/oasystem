@@ -118,7 +118,6 @@ export default {
   // text-align: center;
   // line-height: 200px;
   height: 98vh;
-
 }
 .el-main {
   background-color: #ffffff;
@@ -126,7 +125,7 @@ export default {
   // text-align: center;
   // line-height: 160px;
   height: 98vh;
-	padding: 0;
+  padding: 0;
 }
 .logo {
   width: 16rem;

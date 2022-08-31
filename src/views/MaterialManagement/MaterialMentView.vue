@@ -12,27 +12,27 @@
 </template>
 
 <style lang="scss" scoped>
-span{
-	margin-left: 2.5rem;
-	margin-top: 1.875rem;
-	display: inline-block;
+span {
+  margin-left: 2.5rem;
+  margin-top: 1.875rem;
+  display: inline-block;
 }
-.NameandPress{
-	// background-color: skyblue;
-	width: 18.75rem;
-	height: 7.5rem;
-	margin-top: .625rem;
-	// text-align: center;
-	margin-left: 11.1875rem;
+.NameandPress {
+  // background-color: skyblue;
+  width: 18.75rem;
+  height: 7.5rem;
+  margin-top: 0.625rem;
+  // text-align: center;
+  margin-left: 11.1875rem;
 }
 .UploadaAile {
   width: 18.25rem;
   height: 13.5625rem;
   // background-color: red;
   border: 1px solid black;
-	margin-left: 27.25rem;
-	text-align: center;
-	line-height: 7.3125rem;
-	color: gray;
+  margin-left: 27.25rem;
+  text-align: center;
+  line-height: 7.3125rem;
+  color: gray;
 }
 </style>

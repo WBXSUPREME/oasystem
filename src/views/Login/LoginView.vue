@@ -5,12 +5,14 @@
       <input type="text" placeholder="请输入用户名" class="inp1" />
       <input type="text" placeholder="请输入密码" class="inp1" />
 
-      <p class="ForgotPassword" @click="$router.push('/changepassword')">忘记密码?</p>
+      <p class="ForgotPassword" @click="$router.push('/changepassword')">
+        忘记密码?
+      </p>
       <p class="three">
         <input type="text" placeholder="验证码" />
         <button>验证码图片</button>
       </p>
-			
+
       <!-- 登录按钮 -->
       <button class="loginbutton">登录</button>
       <img
@@ -41,7 +43,6 @@ export default {
     // 	console.log(res);
     // })
   }
-
 }
 </script>
 
