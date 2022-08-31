@@ -17,6 +17,7 @@
           text-color="#f1f6fe"
           active-text-color="#ffd04b"
           router
+
         >
           <el-submenu
             :index="item.path"
@@ -24,7 +25,7 @@
             :key="item.id"
           >
             <template slot="title">
-              <i class="el-icon-location"></i>
+              <i :class="item.icon"></i>
               <span>{{ item.name }}</span>
             </template>
             <el-menu-item-group v-for="citem in item.children" :key="citem.id">
@@ -37,7 +38,7 @@
       <el-main>
         <!-- 功能表头上部 -->
         <div class="UpperPartOfFunctionTableHead">
-          <img src="../../public/img/Snipaste_2022-08-28_10-36-54.png" alt="" />
+          <img src="../../public/img/Snipaste_2022-08-28_10-36-54.png" alt="" @click="TheSidebarShrinks()" />
           <div class="UpperPartOfFunctionTableHeadRight">
             <img src="../../public/img/icon_gayamqjurn7/qizhi.png" alt="" />
             <img src="../../public/img/icon_gayamqjurn7/lingdang.png" alt="" />
@@ -91,7 +92,12 @@ export default {
     FullScreen() {
       console.log(1)
       // screenfull.toggle()
-    }
+    },
+		//侧边栏收缩
+		TheSidebarShrinks(){
+			console.log("侧边栏收缩按钮测试");
+			
+		}
   },
   created() {
     this.$axios.get('/effect/home/menu').then((res) => {
@@ -110,6 +116,7 @@ export default {
   // text-align: center;
   // line-height: 200px;
   height: 98vh;
+
 }
 .el-main {
   background-color: #ffffff;

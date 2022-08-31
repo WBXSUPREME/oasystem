@@ -13,10 +13,10 @@ function setToken(token) {
 }
 
 //删除cookies里面的token
-function removetoken(params) {
+function removetoken(TokenKey) {
   Cookies.remove(TokenKey)
 }
 
-export { setToken, getToken }
+export { setToken, getToken, removetoken}
 
 //npm i js-cookie
